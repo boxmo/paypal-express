@@ -54,7 +54,7 @@ module Paypal
         params = {
           :TOKEN => token,
           :PAYERID => payer_id,
-          :version =< Paypal.api_version
+          :version => Paypal.api_version
         }
         Array(payment_requests).each_with_index do |payment_request, index|
           params.merge! payment_request.to_params(index)
