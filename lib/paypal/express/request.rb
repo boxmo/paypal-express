@@ -18,16 +18,16 @@ module Paypal
         params[:ALLOWNOTE] = 0 if options[:allow_note] == false
 
         {
-          :solution_type => :SOLUTIONTYPE,
-          :landing_page  => :LANDINGPAGE,
-          :email         => :EMAIL,
-          :brand         => :BRANDNAME,
-          :locale        => :LOCALECODE,
-          :logo          => :LOGOIMG,
+          :solution_type     => :SOLUTIONTYPE,
+          :landing_page      => :LANDINGPAGE,
+          :email             => :EMAIL,
+          :brand             => :BRANDNAME,
+          :locale            => :LOCALECODE,
+          :logo              => :LOGOIMG,
           :cart_border_color => :CARTBORDERCOLOR,
-          :payflow_color => :PAYFLOWCOLOR,
-          :ship_name => :SHIPTONAME,
-          :ship_phone => :SHIPTOPHONENUM
+          :payflow_color     => :PAYFLOWCOLOR,
+          :ship_name         => :PAYMENTREQUEST_0_SHIPTONAME,
+          :ship_phone        => :PAYMENTREQUEST_0_SHIPTOPHONENUM
         }.each do |option_key, param_key|
           params[param_key] = options[option_key] if options[option_key]
         end
