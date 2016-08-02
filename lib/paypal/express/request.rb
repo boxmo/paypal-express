@@ -25,7 +25,9 @@ module Paypal
           :locale        => :LOCALECODE,
           :logo          => :LOGOIMG,
           :cart_border_color => :CARTBORDERCOLOR,
-          :payflow_color => :PAYFLOWCOLOR
+          :payflow_color => :PAYFLOWCOLOR,
+          :ship_name => :SHIPTONAME,
+          :ship_phone => :SHIPTOPHONENUM
         }.each do |option_key, param_key|
           params[param_key] = options[option_key] if options[option_key]
         end
